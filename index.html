@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio</title>
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <ul class="menu">
+            <li>
+                <a class="menu-link" href="#inicio"> Início </a>
+            </li>
+            <li>
+                <a class="menu-link" href="#sobre"> Sobre </a>
+            </li>
+            <li>
+                <a class="menu-link" href="#projetos"> Projetos </a>
+            </li>
+            <li>
+                <a class="menu-link" href="#contato"> Contato </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="./img/avatar.jpeg" alt="Meu avatar" class="foto-perfil">
+        <h1>Filipe Breciani</h1>
+        <p class="cabecalho-subtitulo">Desenvolvedor full stack</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-p">Tenho 20 anos e sou estudante de Sistemas de Informação, apaixonado por tecnologia e
+                desenvolvimento de software. Estou em constante evolução, buscando aprimorar minhas habilidades em
+                desenvolvimento web e criação de soluções que unam desempenho, organização e uma boa experiência para o
+                usuário. Gosto de transformar ideias em projetos funcionais, sempre aprendendo novas tecnologias e
+                enfrentando desafios que contribuam para o meu crescimento profissional.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <img src="./img/cafeteria.jpeg" alt="cafeteria" class="projetos-imagem">
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Cafeteria</h3>
+                    <p class="paragrafo-projetos">Landing page completa com design moderno, menu responsivo e foco em
+                        conversão.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/linkup.jpeg" alt="linkup" class="projetos-imagem">
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">LinkUp</h3>
+                    <p class="paragrafo-projetos">Marketplace completo com autenticação, múltiplos níveis de acesso e
+                        painel administrativo</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/netsolutions.jpeg" alt="netsolutions" class="projetos-imagem">
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Site NetSolutions</h3>
+                    <p class="paragrafo-projetos">Website institucional desenvolvido para empresa de tecnologia com
+                        identidade visual premium.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/paginadelogin.png" alt="pag-login" class="projetos-imagem">
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Pagina de Login</h3>
+                    <p class="paragrafo-projetos">Página de login com design moderno, layout responsivo e foco em usabilidade e identidade visual.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/petcare.jpeg" alt="petcare" class="projetos-imagem">
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">PetCare</h3>
+                    <p class="paragrafo-projetos">Landing page responsiva para clínica veterinária com foco em agendamentos.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contato" class="contatos">
+        <h2 class="contatos-titulo">Contatos</h2>
+
+        <form class="form-contato" id="formulario">
+
+            <div class="nome-form">
+                <input type="text" id="nome" class="campo-form" placeholder="Nome" required>
+            </div>
+
+            <div class="grupo-form">
+                <textarea id="mensagem" class="text-form" placeholder="Digite sua mensagem" required></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">
+                Enviar Mensagem
+            </button>
+
+        </form>
+    </section>
+
+    <script>
+        const formulario = document.getElementById('formulario');
+
+        formulario.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome');
+            const mensagem = document.getElementById('mensagem');
+
+            const telefone = '5517988028286';
+
+            const texto = `Olá! Me chamo ${nome.value}.\n\n${mensagem.value}`;
+
+            const msgFormatada = encodeURIComponent(texto);
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+            window.open(url, '_blank');
+        });
+    </script>
+
+</body>
+
+</html>
