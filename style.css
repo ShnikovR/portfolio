@@ -118,6 +118,39 @@ body::before{
     width: 100%;
 }
 
+.idiomas {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 50px;
+    background: rgba(15, 23, 42, .55);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+    z-index: 1001;
+}
+
+.idioma-botao {
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    background: transparent;
+    color: var(--claro);
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.idioma-botao:hover,
+.idioma-botao.ativo {
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    border-color: rgba(255, 255, 255, .18);
+    box-shadow: 0 8px 18px rgba(79, 70, 229, .25);
+}
+
 .cabecalho {
     min-height: 100vh;
     display: flex;
@@ -486,4 +519,35 @@ h1 {
 .footer p span{
     color: var(--primaria);
     font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .menu {
+        top: 16px;
+        gap: 1.5rem;
+        padding: 16px 28px;
+    }
+
+    .idiomas {
+        top: 86px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
+
+@media (max-width: 560px) {
+    .menu {
+        gap: .8rem;
+        padding: 14px 18px;
+        font-size: .9rem;
+    }
+
+    .idiomas {
+        top: 78px;
+    }
+
+    .foto-perfil {
+        width: 260px;
+        height: 260px;
+    }
 }

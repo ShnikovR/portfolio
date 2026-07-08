@@ -13,24 +13,30 @@
     <nav class="nav-bar">
         <ul class="menu">
             <li>
-                <a class="menu-link" href="#inicio"> Início </a>
+                <a class="menu-link" href="#inicio" data-i18n="navInicio"> Início </a>
             </li>
             <li>
-                <a class="menu-link" href="#sobre"> Sobre </a>
+                <a class="menu-link" href="#sobre" data-i18n="navSobre"> Sobre </a>
             </li>
             <li>
-                <a class="menu-link" href="#projetos"> Projetos </a>
+                <a class="menu-link" href="#projetos" data-i18n="navProjetos"> Projetos </a>
             </li>
             <li>
-                <a class="menu-link" href="#contato"> Contato </a>
+                <a class="menu-link" href="#contato" data-i18n="navContato"> Contato </a>
             </li>
         </ul>
     </nav>
 
+    <div class="idiomas" aria-label="Selecionar idioma" data-i18n-attr="aria-label:idiomasLabel">
+        <button class="idioma-botao ativo" type="button" data-lang="pt">PT</button>
+        <button class="idioma-botao" type="button" data-lang="en">EN</button>
+        <button class="idioma-botao" type="button" data-lang="es">ES</button>
+    </div>
+
     <main id="inicio" class="cabecalho">
-        <img src="./img/avatar.jpeg" alt="Meu avatar" class="foto-perfil">
+        <img src="./img/avatar.jpeg" alt="Meu avatar" class="foto-perfil" data-i18n-attr="alt:avatarAlt">
         <h1>Filipe Breciani</h1>
-        <p class="cabecalho-subtitulo">Desenvolvedor full stack</p>
+        <p class="cabecalho-subtitulo" data-i18n="subtitulo">Desenvolvedor full stack</p>
         <div class="social-links">
 
             <a href="https://github.com/ShnikovR" target="_blank">
@@ -47,9 +53,9 @@
     </main>
 
     <section id="sobre" class="sobre">
-        <h2 class="sobre-titulo">Sobre mim</h2>
+        <h2 class="sobre-titulo" data-i18n="sobreTitulo">Sobre mim</h2>
         <div class="sobre-caixa">
-            <p class="sobre-p">Tenho 20 anos e sou estudante de Sistemas de Informação, apaixonado por tecnologia e
+            <p class="sobre-p" data-i18n="sobreTexto">Tenho 20 anos e sou estudante de Sistemas de Informação, apaixonado por tecnologia e
                 desenvolvimento web. Busco criar soluções modernas, responsivas e intuitivas, sempre focando em
                 desempenho, organização e experiência do usuário. Estou em constante aprendizado, desenvolvendo projetos
                 que fortalecem minhas habilidades e contribuem para meu crescimento profissional.
@@ -58,7 +64,7 @@
     </section>
 
     <section id="projetos" class="projetos">
-        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <h2 class="projetos-titulo" data-i18n="projetosTitulo">Meus Projetos</h2>
 
         <div class="projetos-caixa">
 
@@ -66,7 +72,7 @@
                 <img src="./img/cafeteria.jpeg" alt="cafeteria" class="projetos-imagem">
                 <div class="caixa-texto-projeto">
                     <h3 class="info-projetos">Cafeteria</h3>
-                    <p class="paragrafo-projetos">Landing page completa com design moderno, menu responsivo e foco em
+                    <p class="paragrafo-projetos" data-i18n="projetoCafeteria">Landing page completa com design moderno, menu responsivo e foco em
                         conversão.</p>
                 </div>
             </div>
@@ -75,7 +81,7 @@
                 <img src="./img/linkup.jpeg" alt="linkup" class="projetos-imagem">
                 <div class="caixa-texto-projeto">
                     <h3 class="info-projetos">LinkUp</h3>
-                    <p class="paragrafo-projetos">Marketplace completo com autenticação, múltiplos níveis de acesso e
+                    <p class="paragrafo-projetos" data-i18n="projetoLinkup">Marketplace completo com autenticação, múltiplos níveis de acesso e
                         painel administrativo</p>
                 </div>
             </div>
@@ -84,7 +90,7 @@
                 <img src="./img/netsolutions.jpeg" alt="netsolutions" class="projetos-imagem">
                 <div class="caixa-texto-projeto">
                     <h3 class="info-projetos">Site NetSolutions</h3>
-                    <p class="paragrafo-projetos">Website institucional desenvolvido para empresa de tecnologia com
+                    <p class="paragrafo-projetos" data-i18n="projetoNetSolutions">Website institucional desenvolvido para empresa de tecnologia com
                         identidade visual premium.</p>
                 </div>
             </div>
@@ -92,8 +98,8 @@
             <div class="projetos-card">
                 <img src="./img/paginadelogin.png" alt="pag-login" class="projetos-imagem">
                 <div class="caixa-texto-projeto">
-                    <h3 class="info-projetos">Pagina de Login</h3>
-                    <p class="paragrafo-projetos">Página de login com design moderno, layout responsivo e foco em
+                    <h3 class="info-projetos" data-i18n="loginTitulo">Pagina de Login</h3>
+                    <p class="paragrafo-projetos" data-i18n="projetoLogin">Página de login com design moderno, layout responsivo e foco em
                         usabilidade e identidade visual.</p>
                 </div>
             </div>
@@ -102,7 +108,7 @@
                 <img src="./img/petcare.jpeg" alt="petcare" class="projetos-imagem">
                 <div class="caixa-texto-projeto">
                     <h3 class="info-projetos">PetCare</h3>
-                    <p class="paragrafo-projetos">Landing page responsiva para clínica veterinária com foco em
+                    <p class="paragrafo-projetos" data-i18n="projetoPetCare">Landing page responsiva para clínica veterinária com foco em
                         agendamentos.</p>
                 </div>
             </div>
@@ -111,26 +117,145 @@
     </section>
 
     <section id="contato" class="contatos">
-        <h2 class="contatos-titulo">Contatos</h2>
+        <h2 class="contatos-titulo" data-i18n="contatosTitulo">Contatos</h2>
 
         <form class="form-contato" id="formulario">
 
             <div class="nome-form">
-                <input type="text" id="nome" class="campo-form" placeholder="Nome" required>
+                <input type="text" id="nome" class="campo-form" placeholder="Nome" required data-i18n-attr="placeholder:nomePlaceholder">
             </div>
 
             <div class="grupo-form">
-                <textarea id="mensagem" class="text-form" placeholder="Digite sua mensagem" required></textarea>
+                <textarea id="mensagem" class="text-form" placeholder="Digite sua mensagem" required data-i18n-attr="placeholder:mensagemPlaceholder"></textarea>
             </div>
 
-            <button type="submit" class="botao-form">
+            <button type="submit" class="botao-form" data-i18n="botaoEnviar">
                 Enviar Mensagem
             </button>
 
         </form>
     </section>
 
+    <footer class="footer">
+
+        <p data-i18n="footerTexto">© 2026 • Desenvolvido por Filipe Breciani</p>
+
+    </footer>
+
     <script>
+        const traducoes = {
+            pt: {
+                lang: 'pt-BR',
+                titleTexto: 'Portfólio',
+                idiomasLabel: 'Selecionar idioma',
+                navInicio: 'Início',
+                navSobre: 'Sobre',
+                navProjetos: 'Projetos',
+                navContato: 'Contato',
+                avatarAlt: 'Meu avatar',
+                subtitulo: 'Desenvolvedor full stack',
+                sobreTitulo: 'Sobre mim',
+                sobreTexto: 'Tenho 20 anos e sou estudante de Sistemas de Informação, apaixonado por tecnologia e desenvolvimento web. Busco criar soluções modernas, responsivas e intuitivas, sempre focando em desempenho, organização e experiência do usuário. Estou em constante aprendizado, desenvolvendo projetos que fortalecem minhas habilidades e contribuem para meu crescimento profissional.',
+                projetosTitulo: 'Meus Projetos',
+                projetoCafeteria: 'Landing page completa com design moderno, menu responsivo e foco em conversão.',
+                projetoLinkup: 'Marketplace completo com autenticação, múltiplos níveis de acesso e painel administrativo',
+                projetoNetSolutions: 'Website institucional desenvolvido para empresa de tecnologia com identidade visual premium.',
+                loginTitulo: 'Pagina de Login',
+                projetoLogin: 'Página de login com design moderno, layout responsivo e foco em usabilidade e identidade visual.',
+                projetoPetCare: 'Landing page responsiva para clínica veterinária com foco em agendamentos.',
+                contatosTitulo: 'Contatos',
+                nomePlaceholder: 'Nome',
+                mensagemPlaceholder: 'Digite sua mensagem',
+                botaoEnviar: 'Enviar Mensagem',
+                footerTexto: '© 2026 • Desenvolvido por Filipe Breciani',
+                whatsapp: 'Olá! Me chamo'
+            },
+            en: {
+                lang: 'en',
+                titleTexto: 'Portfolio',
+                idiomasLabel: 'Select language',
+                navInicio: 'Home',
+                navSobre: 'About',
+                navProjetos: 'Projects',
+                navContato: 'Contact',
+                avatarAlt: 'My avatar',
+                subtitulo: 'Full stack developer',
+                sobreTitulo: 'About me',
+                sobreTexto: 'I am 20 years old and an Information Systems student, passionate about technology and web development. I aim to create modern, responsive, and intuitive solutions, always focused on performance, organization, and user experience. I am constantly learning, building projects that strengthen my skills and support my professional growth.',
+                projetosTitulo: 'My Projects',
+                projetoCafeteria: 'Complete landing page with modern design, responsive menu, and focus on conversion.',
+                projetoLinkup: 'Complete marketplace with authentication, multiple access levels, and an administrative dashboard',
+                projetoNetSolutions: 'Institutional website developed for a technology company with a premium visual identity.',
+                loginTitulo: 'Login Page',
+                projetoLogin: 'Login page with modern design, responsive layout, and focus on usability and visual identity.',
+                projetoPetCare: 'Responsive landing page for a veterinary clinic focused on appointments.',
+                contatosTitulo: 'Contact',
+                nomePlaceholder: 'Name',
+                mensagemPlaceholder: 'Type your message',
+                botaoEnviar: 'Send Message',
+                footerTexto: '© 2026 • Developed by Filipe Breciani',
+                whatsapp: 'Hello! My name is'
+            },
+            es: {
+                lang: 'es',
+                titleTexto: 'Portafolio',
+                idiomasLabel: 'Seleccionar idioma',
+                navInicio: 'Inicio',
+                navSobre: 'Sobre mí',
+                navProjetos: 'Proyectos',
+                navContato: 'Contacto',
+                avatarAlt: 'Mi avatar',
+                subtitulo: 'Desarrollador full stack',
+                sobreTitulo: 'Sobre mí',
+                sobreTexto: 'Tengo 20 años y soy estudiante de Sistemas de Información, apasionado por la tecnología y el desarrollo web. Busco crear soluciones modernas, responsivas e intuitivas, siempre con foco en rendimiento, organización y experiencia del usuario. Estoy en constante aprendizaje, desarrollando proyectos que fortalecen mis habilidades y contribuyen a mi crecimiento profesional.',
+                projetosTitulo: 'Mis Proyectos',
+                projetoCafeteria: 'Landing page completa con diseño moderno, menú responsivo y foco en conversión.',
+                projetoLinkup: 'Marketplace completo con autenticación, múltiples niveles de acceso y panel administrativo',
+                projetoNetSolutions: 'Sitio web institucional desarrollado para una empresa de tecnología con identidad visual premium.',
+                loginTitulo: 'Página de Login',
+                projetoLogin: 'Página de login con diseño moderno, layout responsivo y foco en usabilidad e identidad visual.',
+                projetoPetCare: 'Landing page responsiva para clínica veterinaria con foco en citas.',
+                contatosTitulo: 'Contacto',
+                nomePlaceholder: 'Nombre',
+                mensagemPlaceholder: 'Escribe tu mensaje',
+                botaoEnviar: 'Enviar Mensaje',
+                footerTexto: '© 2026 • Desarrollado por Filipe Breciani',
+                whatsapp: '¡Hola! Me llamo'
+            }
+        };
+
+        let idiomaAtual = localStorage.getItem('idioma') || 'pt';
+
+        function trocarIdioma(idioma) {
+            const textos = traducoes[idioma];
+
+            document.documentElement.lang = textos.lang;
+            document.title = textos.titleTexto;
+
+            document.querySelectorAll('[data-i18n]').forEach((elemento) => {
+                const chave = elemento.dataset.i18n;
+                elemento.textContent = textos[chave];
+            });
+
+            document.querySelectorAll('[data-i18n-attr]').forEach((elemento) => {
+                const [atributo, chave] = elemento.dataset.i18nAttr.split(':');
+                elemento.setAttribute(atributo, textos[chave]);
+            });
+
+            document.querySelectorAll('.idioma-botao').forEach((botao) => {
+                botao.classList.toggle('ativo', botao.dataset.lang === idioma);
+            });
+
+            idiomaAtual = idioma;
+            localStorage.setItem('idioma', idioma);
+        }
+
+        document.querySelectorAll('.idioma-botao').forEach((botao) => {
+            botao.addEventListener('click', () => trocarIdioma(botao.dataset.lang));
+        });
+
+        trocarIdioma(idiomaAtual);
+
         const formulario = document.getElementById('formulario');
 
         formulario.addEventListener('submit', function (event) {
@@ -141,7 +266,7 @@
 
             const telefone = '5517988028286';
 
-            const texto = `Olá! Me chamo ${nome.value}.\n\n${mensagem.value}`;
+            const texto = `${traducoes[idiomaAtual].whatsapp} ${nome.value}.\n\n${mensagem.value}`;
 
             const msgFormatada = encodeURIComponent(texto);
 
@@ -150,12 +275,6 @@
             window.open(url, '_blank');
         });
     </script>
-
-    <footer class="footer">
-
-        <p>© 2026 • Desenvolvido por Filipe Breciani</p>
-
-    </footer>
 
 </body>
 
